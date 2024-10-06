@@ -1,0 +1,20 @@
+.homepage {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .homepage img {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .homepage h2 {
+    color: #4CAF50;
+  }
+  
+  .homepage p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  

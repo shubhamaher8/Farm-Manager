@@ -1,0 +1,53 @@
+/* src/App.css */
+
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #4CAF50;
+  padding: 20px;
+  text-align: center;
+}
+
+.App-header h1 {
+  color: white;
+}
+
+.App-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.App-footer a img {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App-header, .App-footer {
+    padding: 10px;
+  }
+}
