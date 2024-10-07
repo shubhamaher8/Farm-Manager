@@ -1,0 +1,51 @@
+/* Existing styles */
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px; /* Added padding for better user experience */
+    width: 100%; /* Full width for input */
+}
+
+.dashboard-container {
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
+    gap: 20px; /* Space between the boxes */
+    padding: 20px; /* Padding around the container */
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center the container */
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
+    transition: transform 0.2s; /* Smooth hover effect */
+
+    /* Add hover effect */
+    &:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
+}
+
+button {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px; /* Added padding for better button size */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}

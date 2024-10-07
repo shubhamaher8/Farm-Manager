@@ -9,8 +9,8 @@ function Footer() {
         {/* Contact Section */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: your-email@example.com</p>
-          <p>Phone: +123-456-7890</p>
+          <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+123-456-7890</a></p>
         </div>
 
         {/* Quick Links Section */}
@@ -51,3 +51,4 @@ function Footer() {
 }
 
 export default Footer;
+

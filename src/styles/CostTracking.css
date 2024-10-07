@@ -1,0 +1,64 @@
+/* src/components/CostTracking.css */
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .form input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    grid-column: span 2;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  .bar-chart-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .summary {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  

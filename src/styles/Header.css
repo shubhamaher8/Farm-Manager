@@ -1,65 +1,106 @@
-/* src/styles/Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 .header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 0;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif; /* Use the new font */
+  position: relative; /* Maintain flow in the document */
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px; /* Set a max-width for the header */
+  margin: 0 auto; /* Center the header */
+  padding: 0 20px; /* Padding for sides */
 }
 
 .logo {
-  width: 50px;
-  height: auto;
+  width: 50px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: -15px ;
 }
 
 .site-title {
-  font-size: 3rem;
-  margin-left:0.1vh;
-  font-weight: bold;
+  font-size: 1.8em; /* Larger title */
+  font-weight: 700; /* Bold title */
+  margin: 0 20px; /* Space between title and logo */
+}
+
+.navbar {
+  flex-grow: 1; /* Allow navbar to take available space */
+  text-align: center; /* Center nav items */
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 5vh; /* Space between nav items */
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center the nav items */
+}
+
+.navbar li {
+  margin: 0 15px; /* Space between nav items */
 }
 
 .navbar a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+  color: white; /* White links */
+  text-decoration: none; /* Remove underline */
+  font-weight: 400; /* Normal weight */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .navbar a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  color: #ffeb3b; /* Highlight on hover */
+  text-decoration: underline; /* Underline on hover */
 }
 
-
-
-/* Call-to-Action Button */
 .cta-button {
-  background-color: #FF9800;
-  border-radius: 5px;
+  margin-left: 20px; /* Space before button */
 }
 
-.cta-button .btn {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+.btn {
+  padding: 10px 20px;
+  background-color: #ff9800; /* Orange */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-.cta-button .btn:hover {
-  background-color: #FF5722;
+.btn:hover {
+  background-color: #e68a00; /* Darker orange on hover */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px; /* Reduce side padding */
+  }
+
+  .navbar ul {
+    flex-wrap: wrap; /* Allow wrapping of nav items */
+  }
+
+  .navbar li {
+    margin: 0 10px; /* Adjust space for nav items */
+  }
+
+  .site-title {
+    font-size: 1.5em; /* Smaller title on mobile */
+  }
+}
+
+/* Main content styles */
+main {
+  padding-top: 80px; /* Add padding to the top of the main section */
+  /* Adjust this value according to your header height */
+}
+
+
+
