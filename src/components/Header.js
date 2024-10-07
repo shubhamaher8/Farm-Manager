@@ -19,7 +19,7 @@ function Header() {
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
             <li className="dropdown">
-              <a href="#services">Services</a>
+              <a href="/Services">Services</a>
               <ul className="dropdown-content">
                 <li className="hidden"><a href="#crop-management">Crop Management</a></li>
                 <li className="hidden"><a href="#expense-tracking">Expense Tracking</a></li>

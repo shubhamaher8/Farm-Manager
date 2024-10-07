@@ -8,6 +8,7 @@ import TrackExpense from './components/TrackExpense';
 import CropHealth from './components/CropHealth';
 import FarmingInputs from './components/FarmingInputs';
 import Contact from './components/Contact';
+import Services from './components/Services';
 import Header from './components/Header'; // Importing Header component
 import Footer from './components/Footer'; // Importing Footer component
 import About from './components/About';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/track-expense" element={<TrackExpense />} />
           <Route path="/About" element={<About />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/crop-health" element={<CropHealth />} />
           <Route path="/farming-inputs" element={<FarmingInputs />} />
