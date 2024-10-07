@@ -1,40 +1,63 @@
+/* src/styles/Register.css */
 .register-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  }
-  
-  .register-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .register-form h2 {
-    margin-bottom: 15px;
-  }
-  
-  .register-form input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .register-form button {
-    padding: 10px;
-    width: 100%;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .register-form button:hover {
-    background-color: #45a049;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8e4; /* Light farm-related background */
+}
+
+.register-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background similar to login */
+  padding: 40px; /* Increased padding */
+  border-radius: 12px; /* Slightly larger border radius */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  width: 400px; /* Increased width */
+  text-align: center;
+}
+
+.register-form h2 {
+  margin-bottom: 25px; /* Increased margin */
+  font-size: 2rem; /* Larger font size */
+  color: #4CAF50;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  margin-bottom: 15px; /* Increased margin */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly larger border radius */
+  font-size: 1rem; /* Added font size for inputs */
+}
+
+.register-button {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 1.1rem; /* Increased font size */
+  border-radius: 6px; /* Slightly larger border radius */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #45a049;
+}
+
+.login-link {
+  margin-top: 20px; /* Increased margin */
+  color: #555;
+  font-size: 0.9rem; /* Added font size for link */
+}
+
+.login-link a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

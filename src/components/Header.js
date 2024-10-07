@@ -32,7 +32,7 @@ function Header() {
 
         {/* Call-to-Action Button */}
         <div className="cta-button">
-          <a href="/register" className="btn">Register Now</a>
+          <a href="/Login" className="btn">Login</a>
         </div>
       </div>
     </header>
