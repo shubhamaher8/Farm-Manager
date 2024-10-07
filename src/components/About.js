@@ -45,13 +45,11 @@ function About() {
           
           <div className="about-section">
             <h3>Why Choose Us?</h3>
-            <ul>
-              <li>User-friendly interface designed for farmers</li>
-              <li>Comprehensive tools for all aspects of farm management</li>
-              <li>Regular updates based on user feedback</li>
-              <li>Dedicated customer support</li>
-              <li>Affordable pricing plans for farms of all sizes</li>
-            </ul>
+            <p>User-friendly interface designed for farmers.</p>
+            <p>Comprehensive tools for all aspects of farm management.</p>
+            <p>Regular updates based on user feedback.</p>
+            <p>Dedicated customer support.</p>
+            <p>Affordable pricing plans for farms of all sizes.</p>
           </div>
         </div>
       </div>
