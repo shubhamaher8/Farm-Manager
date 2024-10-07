@@ -45,37 +45,7 @@
   border-radius: 5px;
 }
 
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f4f4f4;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  color: #4CAF50;
-  padding: 10px 15px;
-  display: block;
-}
-
-/* Hide dropdown items initially */
-.hidden {
-  display: none;
-}
-
-.dropdown-content a:hover {
-  background-color: rgba(200, 200, 200, 0.3);
-}
 
 /* Call-to-Action Button */
 .cta-button {

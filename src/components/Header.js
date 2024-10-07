@@ -18,13 +18,8 @@ function Header() {
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
-            <li className="dropdown">
+            <li>
               <a href="/Services">Services</a>
-              <ul className="dropdown-content">
-                <li className="hidden"><a href="#crop-management">Crop Management</a></li>
-                <li className="hidden"><a href="#expense-tracking">Expense Tracking</a></li>
-                <li className="hidden"><a href="#weather-forecast">Weather Forecast</a></li>
-              </ul>
             </li>
             <li><a href="/contact">Contact</a></li>
           </ul>

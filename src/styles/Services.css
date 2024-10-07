@@ -32,7 +32,7 @@
   
   .service-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Ensures 4 cards align horizontally */
+    grid-template-columns: repeat(3, 1fr); /* Ensures 4 cards align horizontally */
     gap: 30px;
     justify-content: center; /* Centers the grid in the container */
   }
