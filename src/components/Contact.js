@@ -9,20 +9,20 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send the data to a server)
     alert(`Message sent!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
-    // Clear the form
     setName('');
     setEmail('');
     setMessage('');
   };
 
   return (
-    <section className="contact">
-      <div className="container">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, suggestions, or feedback, please feel free to reach out!</p>
-        
+    <div className="contact-page">
+      <div className="contact-left">
+        <h2 className="contact-title">Contact Us</h2>
+        <p className="contact-description">We are here to help you! Please reach out if you have any questions, feedback, or suggestions.</p>
+      </div>
+
+      <div className="contact-right">
         <form className="contact-form" onSubmit={handleSubmit}>
           <input 
             type="text" 
@@ -47,14 +47,15 @@ function Contact() {
           <button type="submit">Send Message</button>
         </form>
 
-        <div className="contact-info">
-          <h3>Contact Information</h3>
-          <p>Email: info@farmmanager.com</p>
-          <p>Phone: +1 (555) 123-4567</p>
-        </div>
+        <p className="contact-info">
+          Email: info@farmmanager.com<br/>
+          Phone: +1 (555) 123-4567
+        </p>
       </div>
-    </section>
+    </div>
   );
 }
 
 export default Contact;
+
+
