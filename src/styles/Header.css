@@ -96,11 +96,42 @@
   }
 }
 
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 0; /* Increase padding for mobile */
+  }
+
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center align the content */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add space below logo */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center align nav items */
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Space between nav items */
+  }
+
+  .site-title {
+    font-size: 1.4em; /* Smaller title for very small screens */
+    margin: 10px 0; /* Space above and below title */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Adjust button padding for mobile */
+    font-size: 0.9em; /* Slightly smaller button text */
+  }
+}
+
 /* Main content styles */
 main {
   padding-top: 80px; /* Add padding to the top of the main section */
   /* Adjust this value according to your header height */
 }
-
-
-
