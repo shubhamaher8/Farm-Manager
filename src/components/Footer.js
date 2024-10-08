@@ -9,18 +9,18 @@ function Footer() {
         {/* Contact Section */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-          <p>Phone: <a href="tel:+1234567890">+123-456-7890</a></p>
+          <p>Email: <a href="mailto:info@farmmanager.com">info@farmmanager.com</a></p>
+          <p>Phone: <a href="tel:+1 (555) 123-4567">+1 (555) 123-4567</a></p>
         </div>
 
         {/* Quick Links Section */}
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="About">About Us</a></li>
+            <li><a href="Services">Services</a></li>
+            <li><a href="Contact">Contact</a></li>
           </ul>
         </div>
 
