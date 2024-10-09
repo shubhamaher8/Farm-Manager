@@ -102,6 +102,21 @@ const AddExpenseButton = styled.button`
   }
 `;
 
+const AddCropButton = styled.button`
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ff9800; /* Orange */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e68a00;
+  }
+`;
+
 const Dashboard = () => {
   const [date, setDate] = useState(new Date()); // State for the calendar
   const [reminder, setReminder] = useState('');
@@ -141,11 +156,17 @@ const Dashboard = () => {
     navigate('/cost-tracking'); // Redirect to the cost-tracking page
   };
 
+    // Function to handle redirect to Cost and Tracking page
+    const handleAddCropClick = () => {
+      navigate('/Crop'); // Redirect to the cost-tracking page
+    };
+
   return (
     <DashboardContainer>
       <Card>
         <Header>Growth and Health Tracking</Header>
         <p>Monitor the overall health of your crops using professional techniques.</p>
+        <AddCropButton onClick={handleAddCropClick}>Add Crop</AddCropButton>
       </Card>
 
       <Card>

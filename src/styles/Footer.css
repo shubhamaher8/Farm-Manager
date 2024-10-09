@@ -4,7 +4,7 @@
   background-color: #000; /* Black background */
   color: #ffffff; /* White text */
   padding: 40px 20px; /* Padding for top/bottom and sides */
-  font-family: 'Arial', sans-serif; /* Consistent font */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
   position: relative; /* Positioning for pseudo-elements */
 }
 
@@ -77,7 +77,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 152, 0, 0.1); /* Light brand color overlay */
+  background: rgba(166, 166, 166, 0.1); /* Light brand color overlay */
   z-index: 0; /* Send it to the back */
 }
 

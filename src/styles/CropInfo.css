@@ -1,0 +1,69 @@
+.crop-info-container {
+  padding: 30px;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+  background-color: #f9f9f9; /* Light background for readability */
+  width: 100%; /* Ensures full width */
+}
+
+.crop-info-container h2 {
+  text-align: center;
+  color: #2c7c31; /* Darker green for more strength */
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  letter-spacing: 2px; /* Add letter spacing */
+}
+
+.crop-card {
+  background-color: white; /* Card background */
+  border: 2px solid #4CAF50; /* Stronger border with green color */
+  border-radius: 15px; /* Larger rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  padding: 30px; /* More padding inside the card */
+  margin: 30px auto; /* Larger space between cards */
+  width: 100%; /* Take full width of container */
+  max-width: 650px; /* Limit max width for readability */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center align items */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add hover effect */
+}
+
+.crop-card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.crop-image {
+  width: 100%; /* Full width of the card */
+  height: 300px; /* Increase height for more presence */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 12px; /* Rounded corners for the image */
+  margin-bottom: 20px; /* More space below the image */
+  border: 1px solid #ccc; /* Add a subtle border around the image */
+}
+
+.crop-card h3 {
+  color: #333; /* Darker color for subheading */
+  margin-bottom: 20px; /* More space below the heading */
+  text-align: center; /* Center align the heading */
+  font-size: 1.8rem; /* Increase font size */
+  font-weight: bold; /* Make the subheading bold */
+}
+
+.crop-card p {
+  font-size: 1.2rem; /* Increase font size for the text */
+  margin: 15px 0; /* Larger space between paragraphs */
+  line-height: 1.8; /* Improved line height */
+  color: #555; /* Slightly lighter color for text */
+  font-weight: 500; /* Medium weight for stronger readability */
+}
+
+/* Add media queries for responsive layout */
+@media (max-width: 768px) {
+  .crop-card {
+    max-width: 90%; /* Reduce the width on smaller screens */
+    padding: 20px; /* Adjust padding */
+  }
+}
