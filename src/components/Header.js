@@ -13,12 +13,14 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <img
-          src="https://i.ibb.co/n3MCnZF/crop-removebg-preview.png"
-          alt="Farm Manager Logo"
-          className="logo"
-        />
-       <h1 className="site-title">Farm Manager</h1>
+        <div className='logobox'>
+          <img
+            src="https://i.ibb.co/n3MCnZF/crop-removebg-preview.png"
+            alt="Farm Manager Logo"
+            className="logo"
+          />
+          <h1 className="site-title">Farm Manager</h1>
+        </div>
 
         {/* Hamburger Menu Icon */}
         <div className="hamburger" onClick={toggleMenu}>
@@ -28,7 +30,7 @@ function Header() {
         </div>
 
         {/* Navigation Bar */}
-        <nav className={`navbar ${menuOpen ? 'nav-active' : ''}`}>
+        <div>        <nav className={`navbar ${menuOpen ? 'nav-active' : ''}`}>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
@@ -36,7 +38,7 @@ function Header() {
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
-        </nav>
+        </nav></div>
 
         {/* Call-to-Action Button */}
         <div className="cta-button">

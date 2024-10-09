@@ -87,7 +87,7 @@
 .cta-button {
   padding: 12px 24px;
   background-color: #FF9800;
-  color: white;
+  color: rgb(100, 57, 57);
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;

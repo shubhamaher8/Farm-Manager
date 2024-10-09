@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import '../styles/HomePage.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
+import bg1 from "./public/bgfm1(1).jpg"
+import bg2 from "./public/bgfm2.jpg"
 const HomePageContainer = styled.div`
   font-family: 'Montserrat', sans-serif;
   max-width: 1200px;
@@ -156,9 +157,7 @@ const CTAButton = styled.a`
 function HomePage() {
   // Array of background images
   const images = [
-    "https://climate.ai/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/09/shutterstock_1689558058-scaled.jpg.webp",
-    "https://i.ibb.co/LPHZ5w4/Fm2.jpg",
-    "https://i.ibb.co/ChYC1fC/fm1.jpg"
+    "https://climate.ai/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/09/shutterstock_1689558058-scaled.jpg.webp",bg1,bg2
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -167,7 +166,7 @@ function HomePage() {
     // Slide through the images every 5 seconds
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
