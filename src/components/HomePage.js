@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import '../styles/HomePage.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const HomePageContainer = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -30,6 +32,8 @@ const WelcomeImage = styled.div`
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    transition: opacity 1s ease-in-out;
+    opacity: ${(props) => (props.isVisible ? 1 : 0)};
   }
 `;
 
@@ -85,18 +89,18 @@ const FeaturesSection = styled.div`
 const FeaturesContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 5px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 20px;
   }
 `;
 
 const FeatureBox = styled.div`
   flex: 1 1 calc(45% - 20px);
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 250px;
+  max-width: 350px;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
@@ -127,11 +131,10 @@ const FeatureBox = styled.div`
     color: #555;
   }
 
-  /* Icon styling */
   .feature-icon {
-    font-size: 3em; /* Adjust icon size */
-    color: #4caf50; /* Icon color */
-    margin-bottom: 15px; /* Space below icon */
+    font-size: 3em;
+    color: #4caf50;
+    margin-bottom: 15px;
   }
 `;
 
@@ -151,54 +154,59 @@ const CTAButton = styled.a`
 `;
 
 function HomePage() {
+  // Array of background images
+  const images = [
+    "https://climate.ai/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/09/shutterstock_1689558058-scaled.jpg.webp",
+    "https://i.ibb.co/LPHZ5w4/Fm2.jpg",
+    "https://i.ibb.co/ChYC1fC/fm1.jpg"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Slide through the images every 5 seconds
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <HomePageContainer>
-      {/* Welcome Section */}
       <WelcomeSection>
-        <WelcomeImage>
-          <img 
-            src="https://climate.ai/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/09/shutterstock_1689558058-scaled.jpg.webp" 
-            alt="Farm" 
-          />
-          <Overlay>
-            <h2>Welcome to the Agricultural Schemes Portal</h2>
-            <p>
-              Find the latest schemes and benefits available for farmers.
-            </p>
-            <CTAButton href="#features">Explore Schemes</CTAButton>
-          </Overlay>
-        </WelcomeImage>
+        {images.map((image, index) => (
+          <WelcomeImage key={index} isVisible={index === currentImageIndex}>
+            <img src={image} alt={`Slide ${index + 1}`} />
+          </WelcomeImage>
+        ))}
+        <Overlay>
+          <h2>Welcome to the Agricultural Schemes Portal</h2>
+          <p>Find the latest schemes and benefits available for farmers.</p>
+          <CTAButton href="#features">Explore Schemes</CTAButton>
+        </Overlay>
       </WelcomeSection>
 
-      {/* Features Section */}
       <FeaturesSection id="features">
         <h3>Our Features</h3>
         <FeaturesContainer>
           <FeatureBox>
-            <a href="https://fontawesome.com/icons/leaf" target="_blank" rel="noreferrer">
-              <i className="fas fa-leaf feature-icon"></i>
-            </a>
+            <i className="fas fa-leaf feature-icon"></i>
             <h4>Real-time Crop Health Monitoring</h4>
             <p>Monitor your crops in real-time to ensure optimal health and yield.</p>
           </FeatureBox>
           <FeatureBox>
-            <a href="https://fontawesome.com/icons/chart-line" target="_blank" rel="noreferrer">
-              <i className="fas fa-chart-line feature-icon"></i>
-            </a>
+            <i className="fas fa-chart-line feature-icon"></i>
             <h4>Expense and Revenue Tracking</h4>
             <p>Keep track of your expenses and revenues for better financial management.</p>
           </FeatureBox>
           <FeatureBox>
-            <a href="https://fontawesome.com/icons/calendar-alt" target="_blank" rel="noreferrer">
-              <i className="fas fa-calendar-alt feature-icon"></i>
-            </a>
+            <i className="fas fa-calendar-alt feature-icon"></i>
             <h4>Customizable Farm Activity Calendar</h4>
             <p>Plan and manage your farming activities with a customizable calendar.</p>
           </FeatureBox>
           <FeatureBox>
-            <a href="https://fontawesome.com/icons/user-graduate" target="_blank" rel="noreferrer">
-              <i className="fas fa-user-graduate feature-icon"></i>
-            </a>
+            <i className="fas fa-user-graduate feature-icon"></i>
             <h4>Access to Expert Farming Advice</h4>
             <p>Get access to expert advice to improve your farming techniques and yield.</p>
           </FeatureBox>
@@ -209,6 +217,7 @@ function HomePage() {
 }
 
 export default HomePage;
+
 
 
 
