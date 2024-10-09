@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Header.css';
 
+
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Function to toggle menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -10,10 +18,17 @@ function Header() {
           alt="Farm Manager Logo"
           className="logo"
         />
-        <h1 className="site-title">Farm Manager</h1>
+       <h1 className="site-title">Farm Manager</h1>
+
+        {/* Hamburger Menu Icon */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         {/* Navigation Bar */}
-        <nav className="navbar">
+        <nav className={`navbar ${menuOpen ? 'nav-active' : ''}`}>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
@@ -33,6 +48,3 @@ function Header() {
 }
 
 export default Header;
-
-
-

@@ -1,106 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .header {
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text color */
+  background-color: #4CAF50;
+  color: white;
   padding: 10px 0;
-  font-family: 'Montserrat', sans-serif; /* Use the new font */
-  position: relative; /* Maintain flow in the document */
-  z-index: 1000; /* Ensure it stays on top */
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  z-index: 1000;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Set a max-width for the header */
-  margin: 0 auto; /* Center the header */
-  padding: 0 20px; /* Padding for sides */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
-  width: 50px; /* Adjust logo size */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: -15px ;
+  width: 50px;
+  height: auto;
 }
 
 .site-title {
-  font-size: 1.8em; /* Larger title */
-  font-weight: 700; /* Bold title */
-  margin: 0 20px; /* Space between title and logo */
-}
-
-.navbar {
-  flex-grow: 1; /* Allow navbar to take available space */
-  text-align: center; /* Center nav items */
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0 20px;
 }
 
 .navbar ul {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  display: flex; /* Flex layout */
-  justify-content: center; /* Center the nav items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar li {
-  margin: 0 15px; /* Space between nav items */
+  margin: 0 15px;
 }
 
 .navbar a {
-  color: white; /* White links */
-  text-decoration: none; /* Remove underline */
-  font-weight: 400; /* Normal weight */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ffeb3b; /* Highlight on hover */
-  text-decoration: underline; /* Underline on hover */
+  color: #ffeb3b;
+  text-decoration: underline;
 }
 
 .cta-button {
-  margin-left: 20px; /* Space before button */
+  margin-left: 20px;
 }
 
 .btn {
   padding: 10px 20px;
-  background-color: #ff9800; /* Orange */
-  color: white; /* White text */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #e68a00; /* Darker orange on hover */
+  background-color: #e68a00;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px;
+  border-radius: 2px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 10px; /* Reduce side padding */
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
   }
 
-  .navbar ul {
-    flex-wrap: wrap; /* Allow wrapping of nav items */
+  .navbar.nav-active ul {
+    height: auto;
+    padding: 20px 0;
   }
 
   .navbar li {
-    margin: 0 10px; /* Adjust space for nav items */
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .site-title {
-    font-size: 1.5em; /* Smaller title on mobile */
+    font-size: 1.5em;
+  }
+
+  .cta-button {
+    display: none; /* Hide CTA on mobile */
   }
 }
 
-/* Main content styles */
 main {
-  padding-top: 80px; /* Add padding to the top of the main section */
-  /* Adjust this value according to your header height */
+  padding-top: 80px;
 }
-
-
-
