@@ -85,3 +85,55 @@
   position: relative; /* Position relative for child elements */
   z-index: 1; /* Bring sections above the overlay */
 }
+
+/* Responsive footer styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .footer-contact,
+  .footer-links,
+  .footer-social {
+    margin: 10px 0; /* Reduce margin between sections */
+    text-align: center; /* Center align text */
+  }
+
+  .footer h3 {
+    font-size: 1.3rem; /* Slightly smaller font for headings */
+  }
+
+  .footer a {
+    font-size: 1rem; /* Reduce link size */
+  }
+
+  .social-media {
+    justify-content: center; /* Center social media icons */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .footer h3 {
+    font-size: 1.2rem; /* Further reduce heading size */
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem; /* Smaller text for footer bottom */
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-contact,
+  .footer-links,
+  .footer-social {
+    flex: none; /* Disable flex for small screens */
+    width: 100%; /* Take full width */
+  }
+}
