@@ -61,7 +61,7 @@ h2 {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: #4CAF50; /* Semi-transparent background */
   color: white;
   padding: 10px;
   font-size: 1.2em;

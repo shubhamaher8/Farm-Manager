@@ -60,14 +60,16 @@ const Overlay = styled.div`
   }
 
   h2 {
+  color : white;
     transition: color 0.3s;
   }
 
   &:hover h2 {
-    color: #4caf50;
+    color: #fff;
   }
 
   p {
+    color: #cddc39;
     transition: color 0.3s;
   }
 
