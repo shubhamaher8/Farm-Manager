@@ -1,13 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Header.css';
-
+import { account } from '../appwrite'; // Assuming you're using Appwrite
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Function to toggle menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  // Check if user is logged in on component mount
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      try {
+        const user = await account.get(); // Fetch the current user session from Appwrite
+        setIsLoggedIn(true); // If user is logged in, update state
+      } catch (error) {
+        setIsLoggedIn(false); // If no user is logged in, set false
+      }
+    };
+
+    checkLoginStatus();
+  }, []);
+
+  // Handle logout
+  const handleLogout = async () => {
+    try {
+      await account.deleteSession('current'); // Delete the current session (log out)
+      setIsLoggedIn(false); // Update state to reflect logout
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
   };
 
   return (
@@ -30,19 +55,22 @@ function Header() {
         </div>
 
         {/* Navigation Bar */}
-        <div>        <nav className={`navbar ${menuOpen ? 'nav-active' : ''}`}>
+        <nav className={`navbar ${menuOpen ? 'nav-active' : ''}`}>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
             <li><a href="/Services">Services</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
-        </nav></div>
+        </nav>
 
         {/* Call-to-Action Button */}
         <div className="cta-button">
-          <a href="/Login" className="btn">Login</a>
+          {isLoggedIn ? (
+            <button onClick={handleLogout} className="btn">Logout</button>
+          ) : (
+            <a href="/Login" className="btn">Login</a>
+          )}
         </div>
       </div>
     </header>

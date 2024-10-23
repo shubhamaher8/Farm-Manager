@@ -1,16 +1,23 @@
-// src/components/Register.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
+import { account } from '../appwrite'; // Import account from appwrite.js
 import '../styles/Register.css';
 
 function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    // Add register functionality
-    alert('Registered successfully!');
+    
+    try {
+      // Register the user using Appwrite
+      await account.create('unique()', username, password);
+      alert('Registered successfully!');
+    } catch (error) {
+      console.error(error);
+      alert('Registration failed!');
+    }
   };
 
   return (
@@ -32,7 +39,6 @@ function Register() {
           />
           <button type="submit" className="register-button">Register</button>
           
-          {/* Link to Login Page */}
           <p className="login-link">
             Already have an account? <Link to="/login">Login here</Link>
           </p>
