@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { account } from '../appwrite'; // Import account from appwrite.js
 import '../styles/Register.css';
 
 function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ function Register() {
       // Register the user using Appwrite
       await account.create('unique()', username, password);
       alert('Registered successfully!');
+      navigate('/dashboard'); // Navigate to /dashboard after registration
     } catch (error) {
       console.error(error);
       alert('Registration failed!');
