@@ -1,5 +1,17 @@
 # Farm Manager
 
+## Screenshots
+
+<div align="center">
+  <img src="public/Home.png" alt="Home" width="45%"> 
+  <img src="public/Dashboard.png" alt="Dashboard" width="45%">
+</div>
+
+<div align="center">
+  <img src="public/Services.png" alt="Services" width="45%">
+  <img src="public/Cost-Tracking.png" alt="Cost Tracking" width="45%">
+</div>
+
 ## Overview
 Farm Manager is a specialized platform tailored for farmers to effectively manage their crops and financial data. It focuses on simplifying crop planning, providing data visualization, maintaining detailed crop information, and tracking expenses and profitability.
 
