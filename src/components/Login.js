@@ -1,10 +1,9 @@
 import React, { useState } from 'react'; 
 import { Link, useNavigate } from 'react-router-dom'; // useNavigate for navigation
-import { client, account } from '../appwrite'; // Import 'client' and 'account' from your appwrite.js
 import '../styles/Login.css';
 
 function Login() {
-  const [email, setEmail] = useState(''); // Use email instead of username for Appwrite session
+  const [email, setEmail] = useState(''); // Use email instead of username for session
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState(''); // To display error messages
   const [showPassword, setShowPassword] = useState(false); // Toggle password visibility
@@ -20,8 +19,8 @@ function Login() {
     }
 
     try {
-      // Login the user using Appwrite
-      await account.createEmailPasswordSession(email, password); // Appwrite uses email, not username
+      // Placeholder for login logic
+      // Implement your own login logic here
       alert('Logged in successfully!');
       navigate('/dashboard'); // Redirect to dashboard after login
     } catch (error) {

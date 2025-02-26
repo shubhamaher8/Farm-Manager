@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Header.css';
-import { account } from '../appwrite'; // Assuming you're using Appwrite
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,28 +10,20 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
 
-  // Check if user is logged in on component mount
+  // Placeholder for checking login status
   useEffect(() => {
-    const checkLoginStatus = async () => {
-      try {
-        const user = await account.get(); // Fetch the current user session from Appwrite
-        setIsLoggedIn(true); // If user is logged in, update state
-      } catch (error) {
-        setIsLoggedIn(false); // If no user is logged in, set false
-      }
+    const checkLoginStatus = () => {
+      // Implement your own login status check here
+      setIsLoggedIn(false); // Default to false for now
     };
 
     checkLoginStatus();
   }, []);
 
-  // Handle logout
-  const handleLogout = async () => {
-    try {
-      await account.deleteSession('current'); // Delete the current session (log out)
-      setIsLoggedIn(false); // Update state to reflect logout
-    } catch (error) {
-      console.error('Logout failed:', error);
-    }
+  // Placeholder for logout logic
+  const handleLogout = () => {
+    // Implement your own logout logic here
+    setIsLoggedIn(false); // Update state to reflect logout
   };
 
   return (
@@ -60,7 +51,7 @@ function Header() {
             <li><a href="/">Home</a></li>
             <li><a href="/About">About</a></li>
             <li><a href="/Services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
           </ul>
         </nav>
 

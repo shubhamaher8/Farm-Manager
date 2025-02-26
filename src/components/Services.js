@@ -10,11 +10,10 @@ const Services = () => {
       <div className="container">
         <div className="service-grid">
           
-
           <div className="service-card">
             <h3>Expense Tracking</h3>
             <p>Monitor farm expenses, manage budgets, and track profitability effectively.</p>
-            <Link to="" className="service-link">Learn More</Link>
+            <Link to="/cost-tracking" className="service-link">Learn More</Link>
           </div>
 
           <div className="service-card">
