@@ -11,14 +11,12 @@ Farm Manager is a specialized platform tailored for farmers to effectively manag
 
 ## Technologies Used
 - **Frontend**: React
-- **Backend**: Appwrite (used for authentication, database, and serverless functions)
-- **Database**: Managed by Appwrite
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/farm-manager.git
+   git clone https://github.com/shubhamaher8/Farm-Manager.git
    ```
 
 2. Navigate to the project directory:
@@ -31,22 +29,13 @@ Farm Manager is a specialized platform tailored for farmers to effectively manag
    npm install
    ```
 
-4. Set up environment variables:
-   Create a `.env` file in the root directory and add the following:
-   ```env
-   REACT_APP_API_KEY=your_api_key
-   REACT_APP_APPWRITE_ENDPOINT=your_appwrite_endpoint
-   REACT_APP_APPWRITE_PROJECT_ID=your_appwrite_project_id
-   ```
-
-5. Start the development server:
+4. Start the development server:
    ```bash
    npm start
    ```
 
 ## Usage
 - Visit `http://localhost:3000` in your browser.
-- Log in or sign up to access the dashboard.
 - Use the dashboard to manage crops, visualize data, view crop information, and analyze financial performance.
 
 ## Contributing
