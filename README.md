@@ -50,6 +50,11 @@ Farm Manager is a specialized platform tailored for farmers to effectively manag
 - Visit `http://localhost:3000` in your browser.
 - Use the dashboard to manage crops, visualize data, view crop information, and analyze financial performance.
 
+## Deployment
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://farm-manager-lake.vercel.app/)
+
+[![Live Project](https://img.shields.io/badge/Live%20Project-farm--manager--lake.vercel.app-green?style=for-the-badge&logo=vercel)](https://farm-manager-lake.vercel.app/)
+
 ## Contributing
 We welcome contributions to improve Farm Manager. Please follow these steps:
 1. Fork the repository.
