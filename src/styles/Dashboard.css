@@ -22,12 +22,12 @@ input[type="text"] {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
     transition: transform 0.2s; /* Smooth hover effect */
+}
 
-    /* Add hover effect */
-    &:hover {
-        transform: translateY(-5px); /* Lift effect on hover */
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-    }
+/* Add hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 button {
