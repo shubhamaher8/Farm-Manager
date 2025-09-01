@@ -1,16 +1,23 @@
-# Farm Manager
+# Farm Manager - For The Farmers 🌱 
 
-## Screenshots
+&nbsp;
 
-<div align="center">
-  <img src="public/Home.png" alt="Home" width="45%"> 
-  <img src="public/Dashboard.png" alt="Dashboard" width="45%">
-</div>
+## Prototype Screenshots
 
-<div align="center">
-  <img src="public/Services.png" alt="Services" width="45%">
-  <img src="public/Cost-Tracking.png" alt="Cost Tracking" width="45%">
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <img src="public/Home.png" alt="Homepage Screenshot" width="420"/>
+      <br/>
+      <b>Homepage View</b>
+    </td>
+    <td align="center">
+      <img src="public/Dashboard.png" alt="Dashboard Screenshot" width="420"/>
+      <br/>
+      <b>Dashboard View</b>
+    </td>
+  </tr>
+</table>
 
 ## Overview
 Farm Manager is a specialized platform tailored for farmers to effectively manage their crops and financial data. It focuses on simplifying crop planning, providing data visualization, maintaining detailed crop information, and tracking expenses and profitability.
@@ -58,9 +65,11 @@ Farm Manager is a specialized platform tailored for farmers to effectively manag
 ## Contributing
 We welcome contributions to improve Farm Manager. Please follow these steps:
 1. Fork the repository.
-2. Create a new branch for your feature/bug fix.
-3. Commit your changes and push them to your branch.
-4. Submit a pull request with a detailed description of your changes.
+2. Commit the changes
+3. Push the repo with changes
+4. Create a new branch for your feature/bug fix.
+5. Commit your changes and push them to your branch.
+6. Submit a pull request with a detailed description of your changes.
 
 ---
 Feel free to suggest improvements or report issues via GitHub Issues.
